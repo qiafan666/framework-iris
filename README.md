@@ -1,17 +1,17 @@
 # framework-go
 Quickly build http services through framework-go
 
-Introduction
+# Introduction
 application.yaml 中可以配置监听地址，监听端口，日志级别，日志路径等
 application-test.yaml 中可以配置jwt密钥，数据库参数等
 
-运行方法
+# 运行方法
 go run main.go 目前配置监听8080端口
 
-接口详情
+# 接口详情
 见document.pdf
 
-代码结构
+# 代码结构
 
 --common 通用枚举，函数
 --controller http接口入口
