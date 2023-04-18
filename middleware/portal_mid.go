@@ -16,7 +16,7 @@ var jwtConfig struct {
 }
 
 func init() {
-	cornus.GetCornusInstance().LoadCustomizeConfig(&jwtConfig)
+	cornus.GetGotatoInstance().LoadCustomizeConfig(&jwtConfig)
 }
 
 var witheList = map[string]string{
