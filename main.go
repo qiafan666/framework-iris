@@ -11,7 +11,7 @@ func main() {
 	server := cornus.GetCornusInstance()
 	server.Default()
 	server.RegisterErrorCodeAndMsg(commons.MsgLanguageEnglish, common.EnglishCodeMsg)
-	server.StartServer(cornus.DatabaseService, cornus.OssService)
+	//server.StartServer(cornus.DatabaseService, cornus.OssService)
 	router.RegisterRouter(server.App().GetIrisApp())
 	server.WaitClose()
 }

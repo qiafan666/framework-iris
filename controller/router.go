@@ -19,8 +19,8 @@ func RegisterRouter(ctx *iris.Application) {
 	mvc.Configure(ctx.Party("/v1", crs).AllowMethods(iris.MethodOptions, iris.MethodPut),
 		func(application *mvc.Application) {
 			application.Router.Use(middleware.CheckPortalAuth)
-			application.Handle(&TestController{
-				TestService: services.NewTestServiceInstance(),
+			application.Handle(&BaseController{
+				BaseService: services.NewBaseServiceInstance(),
 			})
 		})
 }

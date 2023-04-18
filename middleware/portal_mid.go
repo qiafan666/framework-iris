@@ -5,7 +5,7 @@ import (
 	"framework-go/pojo/request"
 	"github.com/dgrijalva/jwt-go"
 	"github.com/kataras/iris/v12"
-	"github.com/qiafan666/quickweb"
+	cornus "github.com/qiafan666/quickweb"
 	"github.com/qiafan666/quickweb/commons"
 )
 
@@ -20,7 +20,7 @@ func init() {
 }
 
 var witheList = map[string]string{
-	"/v1/health": "",
+	"/v1/test": "",
 }
 
 func CheckPortalAuth(ctx iris.Context) {
