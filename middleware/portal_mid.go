@@ -20,7 +20,8 @@ func init() {
 }
 
 var witheList = map[string]string{
-	"/v1/test": "",
+	"/v1/test":   "",
+	"/v1/health": "",
 }
 
 func CheckPortalAuth(ctx iris.Context) {

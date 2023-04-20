@@ -14,6 +14,11 @@ type BaseController struct {
 	BaseService services.BaseService
 }
 
+func (receiver *BaseController) GetHealth() {
+	receiver.Ctx.StatusCode(iris.StatusOK)
+	return
+}
+
 func (receiver *BaseController) PostTest() {
 	input := request.Test{}
 	if code, msg := utils.ValidateAndBindCtxParameters(&input, receiver.Ctx, "BaseController PostTest"); code != commons.OK {
