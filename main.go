@@ -3,8 +3,8 @@ package main
 import (
 	"framework-go/common"
 	router "framework-go/controller"
-	"github.com/qiafan666/quickweb"
-	"github.com/qiafan666/quickweb/commons"
+	"github.com/qiafan666/gotato"
+	"github.com/qiafan666/gotato/commons"
 )
 
 func main() {

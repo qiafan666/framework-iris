@@ -5,7 +5,7 @@ import (
 	"framework-go/common"
 	"framework-go/pojo/request"
 	"github.com/kataras/iris/v12"
-	"github.com/qiafan666/quickweb/commons"
+	"github.com/qiafan666/gotato/commons"
 	"io"
 	"net/http"
 )

@@ -6,7 +6,7 @@ require (
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/iris-contrib/middleware/cors v0.0.0-20230311205048-b568fe9b470f
 	github.com/kataras/iris/v12 v12.2.0
-	github.com/qiafan666/quickweb v1.0.29
+	github.com/qiafan666/gotato v1.0.2
 	gorm.io/gorm v1.25.0
 )
 

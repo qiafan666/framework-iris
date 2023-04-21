@@ -5,8 +5,8 @@ import (
 	"framework-go/pojo/request"
 	"github.com/dgrijalva/jwt-go"
 	"github.com/kataras/iris/v12"
-	cornus "github.com/qiafan666/quickweb"
-	"github.com/qiafan666/quickweb/commons"
+	cornus "github.com/qiafan666/gotato"
+	"github.com/qiafan666/gotato/commons"
 )
 
 var jwtConfig struct {

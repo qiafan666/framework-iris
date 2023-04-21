@@ -3,7 +3,7 @@ package services
 import (
 	"framework-go/pojo/request"
 	"framework-go/pojo/response"
-	"github.com/qiafan666/quickweb/commons"
+	"github.com/qiafan666/gotato/commons"
 	"sync"
 )
 

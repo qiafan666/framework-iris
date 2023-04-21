@@ -5,8 +5,8 @@ import (
 	"framework-go/pojo/request"
 	"framework-go/services"
 	"github.com/kataras/iris/v12"
-	"github.com/qiafan666/quickweb/commons"
-	"github.com/qiafan666/quickweb/commons/utils"
+	"github.com/qiafan666/gotato/commons"
+	"github.com/qiafan666/gotato/commons/utils"
 )
 
 type BaseController struct {
