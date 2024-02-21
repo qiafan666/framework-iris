@@ -26,11 +26,12 @@ var witheList = map[string]string{
 
 func CheckPortalAuth(ctx iris.Context) {
 
-	var language, phone, companyName string
+	var language, requestId, phone, companyName string
 	var userId, roleId int
 
 	BaseRequest := ctx.Values().Get(common.BaseRequest).(request.BaseRequest)
 	language = BaseRequest.Language
+	requestId = BaseRequest.RequestId
 	//check white list
 	if _, ok := witheList[ctx.Request().RequestURI]; !ok {
 
@@ -39,14 +40,14 @@ func CheckPortalAuth(ctx iris.Context) {
 			return []byte(jwtConfig.JWT.Secret), nil
 		})
 		if err != nil {
-			_ = ctx.JSON(commons.BuildFailed(commons.TokenError, language))
+			_ = ctx.JSON(commons.BuildFailed(commons.TokenError, language, requestId))
 			return
 		}
 
 		if _, ok := parseToken.Claims.(jwt.MapClaims); ok && parseToken.Valid {
 
 		} else {
-			_ = ctx.JSON(commons.BuildFailed(commons.UnKnowError, language))
+			_ = ctx.JSON(commons.BuildFailed(commons.UnKnowError, language, requestId))
 			return
 		}
 
@@ -59,5 +60,4 @@ func CheckPortalAuth(ctx iris.Context) {
 		CompanyName: companyName,
 	})
 	ctx.Next()
-
 }

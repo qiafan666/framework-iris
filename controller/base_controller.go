@@ -22,13 +22,13 @@ func (receiver *BaseController) GetHealth() {
 func (receiver *BaseController) PostTest() {
 	input := request.Test{}
 	if code, msg := utils.ValidateAndBindCtxParameters(&input, receiver.Ctx, "BaseController PostTest"); code != commons.OK {
-		_ = receiver.Ctx.JSON(commons.BuildFailedWithMsg(code, msg))
+		_ = receiver.Ctx.JSON(commons.BuildFailedWithMsg(code, msg, input.RequestId))
 		return
 	}
 	function.BindBaseRequest(&input, receiver.Ctx)
 	if out, code, err := receiver.BaseService.Test(input); err != nil {
-		_ = receiver.Ctx.JSON(commons.BuildFailed(code, input.Language))
+		_ = receiver.Ctx.JSON(commons.BuildFailed(code, input.Language, input.RequestId))
 	} else {
-		_ = receiver.Ctx.JSON(commons.BuildSuccess(out, input.Language))
+		_ = receiver.Ctx.JSON(commons.BuildSuccess(out, input.Language, input.RequestId))
 	}
 }

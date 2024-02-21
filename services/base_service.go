@@ -31,6 +31,5 @@ type baseServiceImp struct {
 }
 
 func (p baseServiceImp) Test(info request.Test) (out response.Test, code commons.ResponseCode, err error) {
-
 	return
 }
