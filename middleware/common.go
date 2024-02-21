@@ -14,7 +14,7 @@ func Common(ctx iris.Context) {
 	//get language
 	language := ctx.Request().Header.Get("Language")
 	if language == "" {
-		language = commons.DefualtLanguage
+		language = commons.DefaultLanguage
 	}
 	ctx.Values().Set(common.BaseRequest, request.BaseRequest{
 		Ctx:      ctx.Values().Get("ctx").(context.Context),
@@ -24,7 +24,7 @@ func Common(ctx iris.Context) {
 
 		body, err := io.ReadAll(ctx.Request().Body)
 		if err != nil {
-			_ = ctx.JSON(commons.BuildFailed(commons.UnKnowError, commons.DefualtLanguage))
+			_ = ctx.JSON(commons.BuildFailed(commons.UnKnowError, commons.DefaultLanguage))
 			return
 		}
 

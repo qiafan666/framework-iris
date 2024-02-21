@@ -3,8 +3,9 @@ package request
 import "context"
 
 type BaseRequest struct {
-	Ctx      context.Context `json:"ctx"`
-	Language string          `json:"language"`
+	Ctx       context.Context `json:"ctx"`
+	RequestId string          `json:"request_id"`
+	Language  string          `json:"language"`
 }
 
 type BasePortalRequest struct {
