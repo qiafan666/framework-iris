@@ -48,5 +48,6 @@ func Common(ctx iris.Context) {
 
 		ctx.Values().Set(commons.CtxValueParameter, body)
 	}
+
 	ctx.Next()
 }
