@@ -7,6 +7,12 @@ import (
 	"github.com/qiafan666/gotato/commons"
 )
 
+// @title framework API Document
+// @description framework API Document
+// @version 1
+// @schemes http
+// @produce json
+// @consumes json
 func main() {
 	server := gotato.GetGotatoInstance()
 	server.Default()

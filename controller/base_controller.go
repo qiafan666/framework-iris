@@ -19,6 +19,15 @@ func (receiver *BaseController) GetHealth() {
 	return
 }
 
+// PostTest godoc
+// @Summary Test
+// @Description Test
+// @Tags test
+// @Accept  json
+// @Produce  json
+// @Router /v1/test [post]
+// @param data body request.Test true "request.Test"
+// @Success 200 {object} response.Test
 func (receiver *BaseController) PostTest() {
 	input := request.Test{}
 	if code, msg := utils.ValidateAndBindCtxParameters(&input, receiver.Ctx, "BaseController PostTest"); code != commons.OK {
