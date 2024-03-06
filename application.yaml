@@ -1,10 +1,11 @@
 server:
   addr : 0.0.0.0
-  port: 8081
+  port: 8080
   # debug info warn error
   loglevel: debug
   profile: test
-  logPath: /data/logs
+  configPath: .\configs
+  logPath: .\log
   logName:  test
 swagger:
   enable: true
