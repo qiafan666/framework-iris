@@ -14,6 +14,8 @@ import (
 
 var blackList = []string{
 	"/v1/health",
+	"/swagger/*",
+	"/debug/pprof/*",
 }
 
 var once sync.Once
