@@ -1,8 +1,8 @@
 package common
 
 import (
-	"github.com/qiafan666/gotato/commons"
-	"github.com/qiafan666/gotato/config"
+	"framework-iris/gota/commons"
+	"framework-iris/gota/config"
 )
 
 var DebugFlag bool

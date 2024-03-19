@@ -3,8 +3,8 @@ package main
 import (
 	"framework-iris/common"
 	router "framework-iris/controller"
-	"github.com/qiafan666/gotato"
-	"github.com/qiafan666/gotato/commons"
+	"framework-iris/gota"
+	"framework-iris/gota/commons"
 )
 
 // @title framework API Document
@@ -14,7 +14,7 @@ import (
 // @produce json
 // @consumes json
 func main() {
-	server := gotato.GetGotatoInstance()
+	server := gota.GetgotaInstance()
 	server.Default()
 	server.RegisterErrorCodeAndMsg(commons.MsgLanguageEnglish, common.EnglishCodeMsg)
 	//server.StartServer(cornus.DatabaseService, cornus.OssService)

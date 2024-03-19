@@ -2,11 +2,11 @@ package middleware
 
 import (
 	"framework-iris/common"
+	cornus "framework-iris/gota"
+	"framework-iris/gota/commons"
 	"framework-iris/pojo/request"
 	"github.com/dgrijalva/jwt-go"
 	"github.com/kataras/iris/v12"
-	cornus "github.com/qiafan666/gotato"
-	"github.com/qiafan666/gotato/commons"
 )
 
 var jwtConfig struct {
@@ -16,7 +16,7 @@ var jwtConfig struct {
 }
 
 func init() {
-	cornus.GetGotatoInstance().LoadCustomizeConfig(&jwtConfig)
+	cornus.GetgotaInstance().LoadCustomizeConfig(&jwtConfig)
 }
 
 var witheList = map[string]string{

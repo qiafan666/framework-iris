@@ -3,10 +3,10 @@ package middleware
 import (
 	"context"
 	"framework-iris/common"
+	"framework-iris/gota/commons"
+	"framework-iris/gota/middleware"
 	"framework-iris/pojo/request"
 	"github.com/kataras/iris/v12"
-	"github.com/qiafan666/gotato/commons"
-	"github.com/qiafan666/gotato/middleware"
 	"io"
 	"net/http"
 	"sync"

@@ -2,11 +2,11 @@ package controller
 
 import (
 	"framework-iris/common/function"
+	"framework-iris/gota/commons"
+	"framework-iris/gota/commons/utils"
 	"framework-iris/pojo/request"
 	"framework-iris/services"
 	"github.com/kataras/iris/v12"
-	"github.com/qiafan666/gotato/commons"
-	"github.com/qiafan666/gotato/commons/utils"
 )
 
 type BaseController struct {
